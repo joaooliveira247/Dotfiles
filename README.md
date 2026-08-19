@@ -14,11 +14,11 @@
 |    App launcher     |              [Wofi](https://github.com/SimplyCEO/wofi)              |  1.5.3   |
 |       Editor        |                       [Zed](https://zed.dev/)                       |  1.15.0  |
 
-### 🪟 [Hyprland](./hypr)
+## 🪟 [Hyprland](./hypr)
 
 I use [hyprconf2lua](https://github.com/Prateek-squadron/hyprconf2lua) to convert my `hyprland.conf` to `hyprland.lua`.
 
-#### [hyprland](./hypr/hyprland.lua)
+### [hyprland](./hypr/hyprland.lua)
 
 - Set position of HDMI-A-1(left) and eDP-1(right).
 - Add HDMI-A-1 as default workspace(1) 'cause is my main monitor.
@@ -31,14 +31,14 @@ I use [hyprconf2lua](https://github.com/Prateek-squadron/hyprconf2lua) to conver
 - Fix Print bind invalid args in `slurp` and `swappy`
 - Add layer rule to swaync control center and notication window 'cause hyprland blur bloken swaync window layer transparent.
 
-#### [hypridle](./hypr/hyprpridle.conf)
+### [hypridle](./hypr/hyprpridle.conf)
 
 - Add reload of waybar when back from hyprlock 'cause it is killing waybar process.
 - Change timeout 5 min to 10 min
 
-#### [hyprlock.conf](./hypr/hyprlock.conf)
+### [hyprlock.conf](./hypr/hyprlock.conf)
 
-##### Theme: https://github.com/mahaveergurjar/Hyprlock-Dots
+#### Theme: https://github.com/mahaveergurjar/Hyprlock-Dots
 
 ⚠️ OBS: To change profile photo in hyprlock change `$HOME/.config/hyprlock/layouts/<layout>.conf`
 
@@ -51,9 +51,9 @@ image {
 }
 ```
 
-### ➖ [Waybar](./waybar)
+## ➖ [Waybar](./waybar)
 
-##### Theme: https://github.com/soaddevgit/WaybarTheme/tree/main
+#### Theme: https://github.com/soaddevgit/WaybarTheme/tree/main
 
 ⚠️ OBS: I do some changes in theme to set it like i wanted.
 
@@ -66,9 +66,9 @@ image {
 
 #### [Waybar css](./waybar/style.css)
 
-### 🐟 Fish shell
+## 🐟 Fish shell
 
-#### 🔨 Functions
+### 🔨 Functions
 
 All functions has `--help` flag to show documentation
 
@@ -79,15 +79,15 @@ All functions has `--help` flag to show documentation
 - [streamDownloader](./fish/functions/streamDownloader.fish) - Download Twitch/Kick VOD segments using ffmpeg
 - [volume](./fish/functions/volume.fish) - Simple interface to set sys volume
 
-### 🔛 Grub
+## 🔛 Grub
 
-#### Theme: https://github.com/Flava-Clown/AstronautGrub
+### Theme: https://github.com/Flava-Clown/AstronautGrub
 
-### 🔒 SDDM
+## 🔒 SDDM
 
-#### Theme: https://github.com/JaKooLit/simple-sddm-2
+### Theme: https://github.com/JaKooLit/simple-sddm-2
 
-### 🙋 SSH Ask pass
+## 🙋 SSH Ask pass
 
 https://github.com/kde/ksshaskpass
 
@@ -104,16 +104,16 @@ hl.env("SSH_ASKPASS_REQUIRE", "prefer")
 ...
 ```
 
-### 🔔 SwayNC
+## 🔔 SwayNC
 
-#### [config.json](./swaync/config.json)
+### [config.json](./swaync/config.json)
 
-#### [style.css](./swaync/style.css)
+### [style.css](./swaync/style.css)
 
-### 📝 Zed editor
+## 📝 Zed editor
 
-### 📜 Custom Scripts
+## 📜 Custom Scripts
 
-#### [mpris notifier](./custom/mpris-notifier.sh)
+### [mpris notifier](./custom/mpris-notifier.sh)
 
 send notification to sys when change music in spotify or mpv([Radio](#-functions)) fish functions, mpv stream don't send album cover art, so i get it from deezer api.
