@@ -117,3 +117,7 @@ hl.env("SSH_ASKPASS_REQUIRE", "prefer")
 ### [mpris notifier](./custom/mpris-notifier.sh)
 
 send notification to sys when change music in spotify or mpv([Radio](#-functions)) fish functions, mpv stream don't send album cover art, so i get it from deezer api.
+
+## 🖼️ Wallpaper
+
+https://wall.alphacoders.com/big.php?i=896653
