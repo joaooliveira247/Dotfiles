@@ -30,6 +30,7 @@ I use [hyprconf2lua](https://github.com/Prateek-squadron/hyprconf2lua) to conver
 - Set Picture in Picture and vlc as float window
 - Fix Print bind invalid args in `slurp` and `swappy`
 - Add layer rule to swaync control center and notication window 'cause hyprland blur bloken swaync window layer transparent.
+- Add bind to exit from fullscreen_state `mainMod + ALT + F`
 
 ### [hypridle](./hypr/hyprpridle.conf)
 
