@@ -1,8 +1,8 @@
-function firefox --description 'Executa Firefox detached'
-	if not sudo -v
-		echo "Acess denied!"
-		return 1
-	end
+function firefox --description 'Run Firefox detached'
+    if not sudo -v
+        echo "Acess denied!"
+        return 1
+    end
 
     if contains -- "-d" $argv
         set -l args
@@ -12,12 +12,10 @@ function firefox --description 'Executa Firefox detached'
             end
         end
 
-        command firefox $args >/dev/null 2>&1 &
-
-        disown (jobs -l -p | last) ^/dev/null
-
-        commandline -f repaint
+        command firefox $args &> /dev/null & disown
+        return 0
     else
         command firefox $argv
+        return 0
     end
 end
