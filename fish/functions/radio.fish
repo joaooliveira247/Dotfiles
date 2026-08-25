@@ -125,7 +125,6 @@ Examples:
         case "volume"
             set -l vol_command $argv[2]
 
-            echo $vol_command
             if test "$vol_command" != "set"; or test -z $vol_command
                 set -l current_volume $(echo '{"command": ["get_property", "volume"]}' | nc -N -U /tmp/mpvsocket | jq '.data | round')
                 echo "$radio_prefix Current volume is "(_heat_volume $current_volume)
@@ -137,7 +136,7 @@ Examples:
             set -l max 100
 
             if string match -qr '^-?\d+$' -- $new_volume; and test $new_volume -ge $min; and test $new_volume -le $max
-                echo '{"command": ["set_property", "volume", 30]}' | nc -N -U /tmp/mpvsocket &> /dev/null
+                echo "{\"command\": [\"set_property\", \"volume\", $new_volume]}" | nc -N -U /tmp/mpvsocket &> /dev/null
                 echo "$radio_prefix Change volume to "(_heat_volume $new_volume)
                 return 0
             else
