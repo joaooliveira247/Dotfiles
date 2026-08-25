@@ -123,16 +123,18 @@ Examples:
 
     switch $command
         case "volume"
-            set -l vol_command argv[2]
-            set -l new_volume $argv[3]
-            set -l min 1
-            set -l max 100
+            set -l vol_command $argv[2]
 
-            if test $vol_command != "set"
+            echo $vol_command
+            if test "$vol_command" != "set"; or test -z $vol_command
                 set -l current_volume $(echo '{"command": ["get_property", "volume"]}' | nc -N -U /tmp/mpvsocket | jq '.data | round')
                 echo "$radio_prefix Current volume is "(_heat_volume $current_volume)
                 return 0
             end
+
+            set -l new_volume $argv[3]
+            set -l min 1
+            set -l max 100
 
             if string match -qr '^-?\d+$' -- $new_volume; and test $new_volume -ge $min; and test $new_volume -le $max
                 echo '{"command": ["set_property", "volume", 30]}' | nc -N -U /tmp/mpvsocket &> /dev/null
