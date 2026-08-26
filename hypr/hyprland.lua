@@ -271,7 +271,9 @@ hl.device({
     kb_variant = "abnt2",
 })
 
+-- custom binds
 hl.bind(mainMod .. " + z", hl.dsp.exec_cmd("wtype ''"))
+hl.bind("mouse:275", hl.dsp.window.drag(), { mouse = true })
 
 -- Inicialização
 hl.on("hyprland.start", function()
