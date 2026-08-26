@@ -104,7 +104,7 @@ Examples:
                 notify-send 'Radio CLI' '📻 Radio: $station was closed.' --icon=audio-speakers
                 " &> /dev/null &
         disown
-        return 1
+        return 0
     else if test "$command" = "on"; and test "$radio_status" != 0
         set -l current_station (echo '{"command": ["get_property", "term-status-msg"]}' | nc -N -U /tmp/mpvsocket | jq '.data')
         set -l stream_url (echo $map_station | jq -r ".$current_station // empty")
