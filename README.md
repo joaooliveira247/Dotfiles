@@ -32,6 +32,7 @@ I use [hyprconf2lua](https://github.com/Prateek-squadron/hyprconf2lua) to conver
 - Add layer rule to swaync control center and notication window 'cause hyprland blur bloken swaync window layer transparent.
 - Add bind to exit from fullscreen_state `mainMod + ALT + F`
 - Add bind to move float window `mouse:275`
+- Add bind to resize float windown `mouse:276`
 
 ### [hypridle](./hypr/hyprpridle.conf)
 
