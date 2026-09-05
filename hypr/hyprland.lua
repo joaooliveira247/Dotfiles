@@ -274,6 +274,7 @@ hl.device({
 -- custom binds
 hl.bind(mainMod .. " + z", hl.dsp.exec_cmd("wtype ''"))
 hl.bind("mouse:275", hl.dsp.window.drag(), { mouse = true })
+hl.bind("mouse:276", hl.dsp.window.resize(), { mouse = true })
 
 -- Inicialização
 hl.on("hyprland.start", function()
